@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Challenge</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <section id = "start_page">
+    <h3 class = "heading">AI Knowledge Challenge</h3>
+    <ul class = "quiz_rules">
+        <li>
+            You will get 1 point for each correct answer. 
+        </li>
+
+        <li>
+            At the end of the Quiz, your total score will be displayed. 
+        </li>
+        <li>
+            Maximum score is 10 points.
+        </li>
+        <li>
+            You have 2 mins to solve the quiz
+        </li>
+    </ul>
+    <button class = "start">Start</button>
+    </section>
+    <section id = "quiz_interface">
+        <div class = "quiz_container">
+            <span id = "current_score"></span>
+            <span id = "timer"></span>
+            <div id="question_number"></div>
+            <div id = "question_box"></div>
+            <div id = "option_box"></div>
+            <button id = "submit_button">Submit</button>
+            <div id = "answer_info"></div>
+            <button id = "next-button">Next</button>
+           
+        </div>
+
+    </section>
+    <section id = "result_page">
+        <h3 id = "quiz_finished">Quiz Finished</h3>
+        <p id = "score_result"></p>
+        <button id = "try_again">Try Again</button>
+    </section>
+    <script src = "script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* General Body Styles */
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container for all sections */
+section 
+{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* --- Start Page Styling --- */
+#start_page 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading 
+{
+    font-size: 2.5rem;
+    color: #1c3c5f;
+    margin-bottom: 20px;
+}
+
+.quiz_rules 
+{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.quiz_rules li 
+{
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%231c3c5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* General Button Styling */
+button 
+{
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: white;
+}
+
+button:hover 
+{
+    transform: translateY(-2px);
+}
+
+.start, #try_again 
+{
+    background-color: #1c3c5f;
+}
+
+.start:hover, #try_again:hover 
+{
+    background-color: #2c4158;
+}
+
+/* --- Quiz Interface Styling --- */
+.quiz_container 
+{
+    position: relative;
+    padding-top: 40px; 
+}
+
+#current_score, #timer 
+{
+    position: absolute;
+    top: -10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #e9ecef;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+#current_score 
+{
+    left: 20px;
+}
+
+#timer 
+{
+    right: 20px;
+    background-color: #1f4e2a;
+    color: white;
+}
+#question_number {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#question_box 
+{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    min-height: 50px;
+}
+
+#option_box 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option 
+{
+    border: 2px solid #ced4da;
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.option:hover 
+{
+    background-color: #f8f9fa;
+}
+
+.option.selected 
+{
+    background-color: #cce5ff;
+    border-color: #007bff;
+    color: #004085;
+}
+
+.option.correct 
+{
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    font-weight: bold;
+}
+
+.option.incorrect 
+{
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+    font-weight: bold;
+}
+
+/* Disable pointer events after an answer is submitted */
+#option_box.answered .option 
+{
+    pointer-events: none;
+}
+
+#submit_button, #next-button 
+{
+    background-color: #1c3c5f;
+}
+
+#submit_button:hover, #next-button:hover 
+{
+    background-color: #2c4158;
+}
+
+#answer_info 
+{
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+/* Result Page Styling */
+#result_page h3 
+{
+    font-size: 2rem;
+    color:  #175a27;
+}
+
+#score_result 
+{
+    font-size: 1.5rem;
+    margin: 20px 0 30px;
+}
+
+#score_result span 
+{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+
+/* --- Initial Display States --- */
+#quiz_interface,
+#result_page,
+#submit_button,
+#next-button,
+#try_again 
+{
+  display: none;
+}
